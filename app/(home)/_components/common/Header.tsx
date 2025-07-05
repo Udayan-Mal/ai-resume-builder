@@ -16,6 +16,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
+
 const Header = () => {
   const { setTheme } = useTheme();
   const { user, isAuthenticated, isLoading, error } = useKindeBrowserClient();
@@ -99,10 +100,14 @@ const Header = () => {
                   <DropdownMenuTrigger role="button">
                     <div className="flex items-center gap-1">
                       <Avatar role="button" className="!cursor-pointer">
-                        <AvatarImage src={user?.picture || ""} />
-                        <AvatarFallback className="!cursor-pointer">
+                        <AvatarImage
+                          src={user?.picture || ""}
+                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                        />
+                        <AvatarFallback>
                           {user?.given_name?.[0]}
                           {user?.family_name?.[0]}
+                          {!user?.given_name && !user?.family_name && user?.email?.[0]}
                         </AvatarFallback>
                       </Avatar>
                       <ChevronDown size="17px" />
