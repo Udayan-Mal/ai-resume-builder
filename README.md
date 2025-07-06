@@ -1,8 +1,5 @@
 # AI Resume Builder
 
-### ❤️ Support
-
-If you find this project helpful, please consider giving this repository a ⭐️ on GitHub, and don't forget to **like**, **share**, and **subscribe** to support our journey!
 
 ## 📌 Project Overview
 
