@@ -12,8 +12,8 @@ const NavBar = () => {
       <div className="w-full flex items-center justify-center h-auto bg-black">
         <div className="max-w-6xl mx-auto py-2">
         <p className="text-white text-sm">
-  <b>Supercharge your career with our AI-powered resume builder.</b>
-</p>
+            <b>Supercharge your career with our AI-powered resume builder</b>
+        </p>
         </div>
       </div>
       <div className="w-full mx-auto max-w-7xl p-3 px-5 flex items-center justify-between ">
